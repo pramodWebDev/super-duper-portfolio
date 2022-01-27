@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pramod Sahu</title>
+    <link rel="shortcut icon" href="../assets/pramodsahu.ico" type="image/x-icon">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" /> -->
+        <!-- <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> -->
+
+        <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .divider {
+            display: block;
+            margin: -5px 0 16px 0;
+            max-width: 150px;
+            border-bottom: 2px dashed #9FA2AB;
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            #navbar {
+                display: none;
+            }
+        }
+
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: blue;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        #closemenu, #tribloopBlock{
+            display: none;
+        }
+
+
+        
+
+
+      
+    </style>
+</head>
+
+<body class="antialiased relative text-gray-600">
+    <header class=" sticky md:hidden lg:hidden top-0 z-50">
+        <!-- <h1> pks </h1> -->
+
+           <!-- mobile header bar -->
+           <div class="bg-white text-blue-700 shadow-2xl  flex justify-between md:hidden leading-none">
+            <a href="#" class="px-4 py-2 text-blue-700  font-bold">Pramod  Sahu <br> <span class="font-light text-xs"> Full Stack Developer </span> </a>
+            <!-- mobile menu button -->
+            <button class="mobile-menu-button p-3 mr-1 focus:outline-none text-xl">
+      
+              <ion-icon id="gridmenu" name="menu"></ion-icon>
+              <ion-icon id="closemenu" name="close"></ion-icon>
+            </button>
+          </div>
+
+          <!-- Mobile header ends -->
+
+          <!-- Mobile nav bar starts -->
+
+          <div class="sidebar bg-white w-40 space-y-0 py-0  md:py-7 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+          
+              <!-- logo -->
+              <span class="hidden md:block">
+    
+              <a href="#" class="text-blue-700 flex items-center space-x-1 px-1 ">
+                
+                <span class="text-4xl font-thin">Pramod Sahu</span>
+               
+              </a><span class=" text-gray-600"> Full Stack Developer </span>
+              <div class="mt-6">
+                <hr class=" border-zinc-500" >
+              </div>
+    
+            </span>
+              <!-- nav -->
+              <nav class="bg-white shadow-lg">
+                <!-- <a href="#" class="block text-gray-600 py-2.5 px-6 rounded transition duration-200   hover:ml-1 ">
+                    <i class="fa fa-user"></i> &nbsp; &nbsp; About
+                </a> -->
+              
+                <a href="#" class="block text-gray-600 py-2 px-6 m-1 rounded-lg transition duration-200   focus:bg-blue-700 focus:text-white navBtn">
+                    <ion-icon class="text-blue-500" name="person"></ion-icon>  &nbsp;  About
+                </a>
+                <a href="#experience" class="block text-gray-600 py-2.5 px-6 rounded transition duration-200  focus:bg-blue-700 focus:text-white navBtn">
+                    
+                    <ion-icon class="text-red-600" name="trending-up"></ion-icon>&nbsp; Experience
+                </a>
+                <a href="#projects" class="block text-gray-600 py-2.5 px-6 rounded transition duration-200    focus:bg-blue-700 focus:text-white navBtn">
+                    <ion-icon class="text-cyan-800 " name="pie-chart"></ion-icon>&nbsp; Projects
+                </a>
+                <a href="#skills" class="block text-gray-600 py-2.5 px-6 rounded transition duration-200  focus:bg-blue-700 focus:text-white navBtn">
+                    <ion-icon class="text-indigo-800" name="code-slash"></ion-icon>&nbsp;   Skills
+                </a>
+                <a href="#education" class="block text-gray-600 py-2.5 px-6 rounded transition duration-200   focus:bg-blue-700 focus:text-white navBtn">
+                    <ion-icon class="text-yellow-600" name="school"></ion-icon>&nbsp; Education
+                </a>
+              
+                <a href="#contact" class="block text-gray-600 py-2.5 px-6 rounded transition duration-200 focus:bg-blue-700 focus:text-white navBtn">
+                    <ion-icon class="text-pink-700" name="mail-open"></ion-icon>&nbsp; Contact
+                </a>
+                <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf" class="block text-gray-600 py-2.5 px-6 rounded transition duration-200 focus:bg-blue-700 focus:text-white  navBtn ">
+                    <ion-icon name="document"></ion-icon>&nbsp;  Resume 
+                </a>
+              
+          
+              </nav>
+            </div>
+          <!-- Mobile nav bar ends -->
+
+        </header>
+
+    <div class="absolute w-full min-h-screen">
+        <div class="absolute z-0 top-0 w-full h-1/2 bg-cover bg-bottom pt-20 px-12 text-white text-center"
+            style="background-image: url('images/bg_banner.jpg')"></div>
+        <div 
+            class="absolute    z-20 bottom-10 right-0 left-0 inline-flex space-x-20 justify-center font-bold uppercase tracking-wide text-gray-600" id="navbar" >
+            <a href="#" class=" hover-underline-animation" >ABOUT</a>
+            <a href="#experience" class="hover-underline-animation">EXPERIENCE</a>
+            <a href="#projects" class="hover-underline-animation">PROJECTS</a>
+            <a href="#skills" class="hover-underline-animation">SKILLS</a>
+            <a href="#education" class="hover-underline-animation">EDUCATION</a>
+            <a href="#contact" class="hover-underline-animation">CONTACT</a>
+            <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf"class="hover-underline-animation">RESUME</a>
+        </div>
+
+        
+    </div>
+    <div class="relative z-10 flex min-h-screen h-auto justify-center items-center">
+        <div class="relative max-w-4xl">
+            <div
+                class="absolute z-10 inset-0 bg-gradient-to-r from-blue-800 to-orange-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
+            </div>
+            <div class="relative z-20 bg-white md:flex justify-between p-12 shadow-lg rounded-lg w-full max-w-4xl">
+                <div class="sm:flex flex-col justify-between space-y-6 py-6 md:pr-10">
+                    <div>
+                        <h2 class="text-lg">Hello, I am</h2>
+                        <h1 class="pt-1 text-5xl font-bold text-blue-500">
+                            Pramod Sahu
+                        </h1>
+                    </div>
+                    <p class="text-xl leading-relaxed">
+                        Full-stack web developer who wants to make things
+                        that make a difference.
+                    </p>
+                    <div class="inline-flex text-xl text-gray-600 space-x-5">
+                        <a href="https://www.instagram.com/p__sahu/" target="_blank">
+                            <ion-icon name="logo-instagram" class="hover:text-red-600" ></ion-icon>
+                        </a>
+  
+                        <a href="https://www.linkedin.com/in/pramod-sahu" target="_blank">
+                            <ion-icon name="logo-linkedin" class="hover:text-blue-700"></ion-icon>
+                        </a>
+                        <a href="https://github.com/pramodWebDev" target="_blank">
+                            <ion-icon name="logo-github" class="hover:text-black"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <img src="images/person.jpg" alt="pramod-sahu"
+                    class="flex-shrink-0 w-80 rounded-xl border-6 border-white shadow-md" />
+            </div>
+        </div>
+    </div>
+    <section id="experience" class="bg-gray-50 pt-20 pb-28 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <h1 class="text-6xl font-bold text-gray-800">EXPERIENCE</h1>
+                <p class="pt-2">Here's what I Learned</p>
+            </div>
+            <div class="mt-24 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-20">
+                <div class="relative">
+                    <div
+                        class="absolute z-10 inset-0  bg-gradient-to-r from-blue-800  to-orange-600 shadow-lg transform -skew-y-3  sm:skew-y-0 sm:-rotate-3  sm:rounded-lg">
+                    </div>
+
+                    <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-8">
+
+                        <h2 style="color:  #434cd1;" class="pt-1 font-bold text-2xl">
+                            Greymetrics
+                            <!-- <ion-icon name="phone-portrait-outline" class="text-sm text-cyan-500"></ion-icon>   Greymetrics -->
+                        </h2>
+                        <span class=" text-sm font-normal text-gray-600 ">Intern</span>
+                        <p class="pt-3">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Consequuntur aperiam quibusdam
+                            repudiandae et necessitatibus culpa libero
+                            mollitia.
+                        </p>
+                        <hr class="border-t-1 mt-10 border-gray-400">
+                        <div class="absolute bottom-2 ">
+
+                            <span style="width: 100%;" class="text-sm text-gray-400"> Oct 2019 - Feb 2020 | Hyderabad
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div
+                        class="absolute z-10 inset-0 bg-gradient-to-r from-blue-800  to-orange-600 shadow-lg transform -skew-y-3 sm:skew-y-0 sm:-rotate-3 sm:rounded-lg">
+                    </div>
+
+                    <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-8">
+
+                        <h2 class="pt-1 text-orange-600 font-bold text-2xl">
+                            VideoForm
+                        </h2> <span class=" text-sm font-normal text-gray-600 ">Full Stack Developer</span>
+                        <p class="pt-3">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Consequuntur aperiam quibusdam
+                            repudiandae et necessitatibus culpa libero
+                            mollitia.
+                        </p>
+                        <hr class="border-t-1 mt-10 border-gray-400">
+                        <div class="absolute bottom-2   ">
+
+                            <span style="width: 100%;" class="text-sm text-gray-400"> Feb 2020 - Nov 2020 | Hyderabad
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div
+                        class="absolute z-10 inset-0 bg-gradient-to-r from-blue-800  to-orange-600 shadow-lg transform -skew-y-3 sm:skew-y-0 sm:-rotate-3 sm:rounded-lg">
+                    </div>
+
+                    <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-8">
+                        <h2 style="color: #5f68c3 ;" class="pt-1 font-bold text-2xl">
+                            Tata Consultancy Services
+                        </h2>
+                        <span class=" text-sm font-normal text-gray-600 ">QA Engineer</span>
+                        <p class="pt-3">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Consequuntur aperiam quibusdam
+                            repudiandae et necessitatibus culpa libero
+                            mollitia.
+                        </p>
+                        <hr class="border-t-1 mt-10 border-gray-400">
+                        <div class="absolute bottom-2   ">
+
+                            <span style="width: 100%;" class="text-sm text-gray-400"> Nov 2020 - Apr 2020 | Bengaluru
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="py-20 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <h1 class="text-6xl font-bold text-gray-800">PROJECTS</h1>
+                <p class="pt-2">The best of my works</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-14">
+
+                <div class="bg-white  rounded-md shadow-md ">
+
+                    <div class="relative">
+
+                        <!-- back card -->
+                        <div class="absolute  z-10 inset-0 bg-white   p-8 rounded-md  " id="tribloopBlock">
+                        <h1 class="text-2xl"> Accomplishments <span onclick="hideTlblock()" > <ion-icon class="text-2xl cursor-pointer float-right" name="close"></ion-icon> </span>  </h1> 
+                        <ul class="list-disc ml-4 mt-5" >
+                            <li class="mb-2" >
+                                 Responsive web site design
+                            </li >
+                            <li class="mb-2">
+                                EJS Fontend 
+                            </li>
+                            <li class="mb-2">
+                                Chrome Developer tool  
+                            </li>
+                            <li class="mb-2">
+                                Frontend debugging
+                            </li>
+                            <li class="mb-2">
+                                Visual Studio Code
+                            </li>
+                            <li class="mb-2">
+                                Dynamic data binding
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- back card ends -->
+                        
+                        <img id="tribloopImg" onclick="showTlblock()" src="./images/work/tribeloop.png" alt="" class="object-cover cursor-pointer rounded-md w-full h-80" />
+                        <div class="p-8">
+                            <h3 class="font-bold text-2xl">TCS BaNCS</h3>
+                            <p class="pt-3">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
+                            <a href="#"
+                                class="text-blue-500">View
+                                More</a>
+                        </div>
+
+                    </div>
+                   
+
+                </div>
+
+
+                <div class="bg-white rounded-md shadow-md">
+                    <img src="./images/work/greymetrics.png" alt="" class="object-cover rounded-md w-full h-80" />
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">Greymetrics</h3>
+                        <p class="pt-3">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
+                        <a href="#"
+                            class="text-blue-500">View Project</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-md shadow-md">
+                    <img src="images/work3.jpg" alt="" class="object-cover rounded-md w-full h-80" />
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">TCS BaNCS</h3>
+                        <p class="pt-3">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
+                        <a href="#"
+                            class="text-blue-500">View Project</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-md shadow-md ">
+
+                    <img src="./images/work/videoform.png" alt="" class="object-cover w-full h-80" />
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">VideoForm</h3>
+                        <p class="pt-3">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Repellat sequi minima vero
+                            sunt perferendis.
+                        </p>
+                        <a href="#"
+                            class="text-blue-500">View Project</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-md shadow-md ">
+                    <img src="./images/work/pkforms.png" alt="" class="object-cover w-full h-80" />
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">PkForms</h3>
+                        <p class="pt-3">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Repellat sequi minima vero
+                            sunt perferendis.
+                        </p>
+                        <a href="#"
+                            class="text-blue-500">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sikils -->
+    <section id="skills" class="bg-gray-50 py-20 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <h1 class="text-6xl font-bold text-gray-800">SKILLS</h1>
+                <p class="pt-2">Things I know</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-14">
+
+                <!-- div starts -->
+                <div class="bg-white rounded-md shadow-md col-span-1 hover:shadow-xl ">
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">HMTL</h3>
+                        <div class="pt-3">
+                            HTML 5
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class=" h-3 bg-blue-600" style="width: 90%;"></div>
+                            </div>
+
+                            EJS
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 70%"></div>
+                            </div>
+                            JSX
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- div ends -->
+                <!-- div starts -->
+                <div class="bg-white rounded-md shadow-md col-span-1 hover:shadow-xl ">
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">CSS</h3>
+                        <div class="pt-3">
+                            CSS 3
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 90%"></div>
+                            </div>
+
+                            Bootstrap
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 85%"></div>
+                            </div>
+                            Tailwind CSS
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- div ends -->
+
+                <!-- div starts -->
+                <div class="bg-white rounded-md shadow-md col-span-1 hover:shadow-xl ">
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">JavaScript</h3>
+                        <div class="pt-3">
+                            JavaScript
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 85%"></div>
+                            </div>
+                            jQuery
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 80%"></div>
+                            </div>
+
+                            TypeScript
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 65%"></div>
+                            </div>
+                            React
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 50%"></div>
+                            </div>
+                            Angular 8
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- div ends -->
+
+                <!-- div starts -->
+                <div class="bg-white rounded-md shadow-md col-span-1 hover:shadow-xl ">
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">Back-End</h3>
+                        <div class="pt-3">
+                            NodeJS with Express
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 80%"></div>
+                            </div>
+                            Pyhton Flask
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 60%"></div>
+                            </div>
+
+                            MongoDB
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 75%"></div>
+                            </div>
+                            MySQL <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 50%"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- div ends -->
+
+                <!-- div starts -->
+                <div class="bg-white rounded-md shadow-md col-span-1 hover:shadow-2xl">
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">Dev Tools</h3>
+                        <div class="pt-3">
+                            VS Code
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 90%"></div>
+                            </div>
+                            Postman
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 70%"></div>
+                            </div>
+
+                            Insomnia
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 65%"></div>
+                            </div>
+
+                        
+
+                        </div>
+                    </div>
+                </div>
+                <!-- div ends -->
+                <!-- div starts -->
+                <div class="bg-white rounded-md shadow-md col-span-1 hover:shadow-2xl">
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl">Other</h3>
+                        <div class="pt-3">
+                            AWS S3
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 70%"></div>
+                            </div>
+                            Github
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 50%"></div>
+                            </div>
+
+                            DatatableJs
+                            <div class="w-full bg-gray-200 h-3 mb-6">
+                                <div class="bg-blue-600 h-3" style="width: 75%"></div>
+                            </div>
+
+                          
+
+                        </div>
+                    </div>
+                </div>
+                <!-- div ends -->
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- skills ends -->
+
+    <!-- Education start -->
+
+    <section id="education" class="py-20 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <h1 class="text-6xl font-bold text-gray-800">EDUCATION</h1>
+                <p class="pt-2">Here's my knowledge comes</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-14">
+
+
+                <!-- card 1 -->
+                <div class=" rounded-md shadow-md  hover:shadow-xl">
+
+                    <div class="relative">
+                        <div
+                            class="absolute z-10 inset-0  bg-gradient-to-r from-blue-800  to-orange-600 shadow-lg transform -skew-y-3  sm:skew-y-0 sm:-rotate-3  sm:rounded-lg">
+                        </div>
+
+                        <div class="relative p-8 z-20 bg-white rounded-lg">
+                            <h3 class="font-bold text-2xl">Chouskesy Engineering College Bilaspur</h3>
+                            <span class=" text-sm font-normal text-gray-500 ">Bilaspur, Chhattisgarh (<i> 2015 -2019
+                            </i>)</span>
+                            <p class="pt-3">
+                                <ul class="list-disc ml-4">
+                                    <li> BE - Computer Science Engineering </li>
+                                </ul>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- card 2 -->
+                <div class=" rounded-md shadow-md  hover:shadow-xl">
+
+                    <div class="relative">
+                        <div
+                            class="absolute z-10 inset-0  bg-gradient-to-r from-blue-800  to-orange-600 shadow-lg transform -skew-y-3  sm:skew-y-0 sm:-rotate-3  sm:rounded-lg">
+                        </div>
+
+                        <div class="relative p-8 z-20 bg-white rounded-lg">
+                            <h3 class="font-bold text-2xl">St. Joseph's Hr. Sec. School Jairamnagar </h3>
+                            <span class=" text-sm font-normal text-gray-500 ">Bilaspur, Chhattisgarh (<i> 2015 </i>)</span>
+                            <p class="pt-3">
+                            <ul class="list-disc ml-4">
+                                <li> 12th - PCM </li>
+                            </ul>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Education ends -->
+
+    <!-- Contact starts -->
+
+    <section id="contact" class="pt-20 pb-24 px-8 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <h1 class="text-6xl font-bold text-gray-300">Contact</h1>
+                <p class="pt-2 text-gray-300">Get in touch with me</p>
+            </div>
+        </div>
+
+        <div class="mt-24 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-20">
+            <!-- card 1 -->
+            <div class="relative">
+                
+                <div class="absolute z-10 inset-0  bg-gradient-to-r from-indigo-700 to-orange-900 shadow-lg transform -skew-y-3  sm:skew-y-0 sm:-rotate-3  sm:rounded-lg">
+                </div>
+
+                <div class=" text-center relative z-20 bg-gray-900 h-full rounded-md shadow-md px-10 py-8">
+
+                    <h2 class="pt-1 font-bold text-gray-300 text-2xl">
+                        Where to find me
+                        <!-- <ion-icon name="phone-portrait-outline" class="text-sm text-cyan-500"></ion-icon>   Greymetrics -->
+                    </h2>
+                    <!-- <span class=" text-sm font-normal text-gray-600 " >Intern</span> -->
+                    <p class="pt-3 text-gray-400">
+                        House No-213, Hirri (495551) <br> Bilaspur, Chhattisgarh, India
+                    </p>
+
+                </div>
+            </div>
+            <!-- card 1 ends -->
+
+
+            <div class="relative">
+                <div
+                    class="absolute z-10 inset-0  bg-gradient-to-r from-indigo-700  to-orange-900 shadow-lg transform -skew-y-3  sm:skew-y-0 sm:-rotate-3  sm:rounded-lg">
+                </div>
+
+                <div class=" text-center relative z-20 bg-gray-900 h-full rounded-md shadow-md px-10 py-8">
+
+                    <h2 class="pt-1 font-bold text-2xl text-gray-300">
+                        Contact me
+                    </h2>
+                    <p class="pt-3">
+                    <ul class="text-gray-400 ">
+                        <li> psahu733@gmail.com</li>
+                        <li> +91 7049711016</li>
+                        <li> +91 8770482086</li>
+                    </ul>
+                    </p>
+
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div
+                    class="absolute z-10 inset-0  bg-gradient-to-r from-indigo-700  to-orange-900 shadow-lg transform -skew-y-3  sm:skew-y-0 sm:-rotate-3  sm:rounded-lg">
+                </div>
+
+                <div class="text-center relative z-20 bg-gray-900 h-full rounded-md shadow-md px-10 py-8">
+
+                    <h2 class="pt-1 font-bold text-gray-300 text-2xl">
+                        Follow me
+                        <!-- <ion-icon name="phone-portrait-outline" class="text-sm text-cyan-500"></ion-icon>   Greymetrics -->
+                    </h2>
+                    <!-- <span class=" text-sm font-normal text-gray-600 " >Intern</span> -->
+                    <p class="pt-3 ">
+                    <ul class=" text-gray-400 ">
+                        <li > <a href="https://www.instagram.com/p__sahu/" target="_blank" class="hover:text-rose-500">
+                                <ion-icon name="logo-instagram"></ion-icon>  Instagram
+                            </a></li>
+                        <li> <a href="https://www.facebook.com/pramod.sahu.54379/" target="_blank"
+                                class="hover:text-blue-700 ">
+                                <ion-icon name="logo-facebook"></ion-icon>  Facebook
+                            </a></li>
+                        <li> <a href="https://twitter.com/psahu733" target="_blank" class="hover:text-blue-400">
+                                <ion-icon name="logo-twitter"></ion-icon>  Twitter
+                            </a></li>
+                        <li> <a href="https://www.linkedin.com/in/pramod-sahu" target="_blank"
+                                class="hover:text-blue-700">
+                                <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
+                            </a></li>
+                        <li> <a href="https://github.com/pramodWebDev" target="_blank" class="hover:text-white">
+                                <ion-icon name="logo-github"></ion-icon> Github
+                            </a></li>
+                    </ul>
+                    </p>
+
+                </div>
+            </div>
+</div>
+
+            <div class="max-w-6xl mx-auto mt-32">
+                <div class="text-center">
+                    <p class="pt-2 font-medium text-xs text-indigo-800">&copy; Copyright 2022 pramod-sahu.com<br> All rights reserved. </p>
+                </div>
+            </div>
+        </div>
+  
+
+    </section>
+    <!-- <section class="pt-20 pb-36 px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <h1 class="text-6xl font-bold text-gray-800">Contact</h1>
+                <p class="pt-2">Get in touch with me</p>
+            </div>
+        </div>
+        <div class="mt-16 relative max-w-4xl mx-auto">
+            <div class="absolute z-10 inset-0 bg-gradient-to-r from-blue-800  to-orange-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
+            </div>
+            <div class="relative z-20 bg-white rounded-md shadow-md p-12">
+                <form action="">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                        <input type="text" placeholder="Name"
+                            class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400" />
+                        <input type="text" placeholder="Email"
+                            class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400" />
+                        <input type="text" placeholder="Subject"
+                            class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2" />
+                        <textarea rows="5" placeholder="Message"
+                            class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"></textarea>
+                    </div>
+                    <button
+                        class="inline-block w-auto mt-4 px-6 py-2 bg-gradient-to-r from-blue-800  to-orange-600 rounded-md shadow-md text-sm font-bold text-white">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Contact ends -->
+
+    <script>
+
+        const btn = document.querySelector(".mobile-menu-button");
+       
+
+        const sidebar = document.querySelector(".sidebar");
+
+        var gridmenu = document.getElementById("gridmenu");
+        var closemenu = document.getElementById("closemenu");
+
+
+        var counter = 1;
+        btn.addEventListener("click", () => {
+          
+
+        console.log( counter);
+        sidebar.classList.toggle("-translate-x-full");
+
+        
+     if( counter == 1){
+        gridmenu.style.display = "none";
+        closemenu.style.display = "block";
+     }else{
+        if (closemenu.style.display === "none") {
+        gridmenu.style.display = "none";
+        closemenu.style.display = "block";
+        } else {
+        gridmenu.style.display = "block";
+        closemenu.style.display = "none";
+        }
+     }
+        
+
+        counter++;
+        });
+
+
+       
+        function showTlblock(){
+
+            console.log("first");
+            var tribloopBlock = document.getElementById("tribloopBlock");
+
+            tribloopBlock.style.display = "block";
+        }
+        function hideTlblock(){
+
+            console.log("first");
+            var tribloopBlock = document.getElementById("tribloopBlock");
+
+            tribloopBlock.style.display = "none";
+        }
+
+        // const tribloopImg = document.querySelector("#tribloopImg");
+        // console.log(tribloopImg,"tribloopImg");
+        // btn.addEventListener("click", () => {
+
+        //     console.log("herer");
+
+        //     document.querySelector("#tribloopImg").style.display = 'block'
+
+
+
+        //  })
+
+       
+
+
+
+      </script>
+
+</body>
+
+</html>
