@@ -3,7 +3,7 @@ module.exports = {
   purge: {
     content: ['./public/**/*.html'],
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       borderWidth: {
@@ -15,7 +15,9 @@ module.exports = {
         'lime':colors.lime,
         'orange':colors.orange,
         'zinc':colors.zinc,
-        'rose':colors.rose
+        'rose':colors.rose,
+        'slate':colors.slate
+
       },
     },
   },
