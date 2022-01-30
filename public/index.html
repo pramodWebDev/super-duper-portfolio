@@ -10,10 +10,10 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" /> -->
-        <!-- <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> -->
+    <!-- <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> -->
 
-        <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <style>
         .divider {
@@ -44,7 +44,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: blue;
+            background-color: #ea580c;
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
         }
@@ -54,19 +54,23 @@
             transform-origin: bottom left;
         }
 
-        #closemenu, #tribloopBlock{
+        #closemenu,
+        #tribloopBlock, 
+        #greymetricsBlock,
+        #tcsBlock,
+        #videoform,
+        #pkforms
+         {
             display: none;
         }
 
-/* Toggle A */
-input:checked ~ .dot {
-  transform: translateX(100%);
-  background-color: #4338ca;
-}
-        
+        /* Toggle A */
+        input:checked~.dot {
+            transform: translateX(100%);
+            background-color: #4338ca;
+        }
 
 
-      
     </style>
 </head>
 
@@ -78,98 +82,114 @@ input:checked ~ .dot {
     <header class=" sticky md:hidden lg:hidden top-0 z-50">
         <!-- <h1> pks </h1> -->
 
-           <!-- mobile header bar -->
-           <div class="bg-white text-blue-700 shadow-2xl  flex justify-between md:hidden leading-none dark:bg-gray-900">
-            <a href="#" class="px-4 py-2 text-blue-700  font-bold dark:text-indigo-500 ">Pramod  Sahu <br> <span class="font-light text-xs"> Full Stack Developer </span> </a>
+        <!-- mobile header bar -->
+        <div class="bg-white text-blue-700 shadow-2xl  flex justify-between md:hidden leading-none dark:bg-gray-900">
+            <a href="#" class="px-4 py-2 text-blue-700  font-bold dark:text-indigo-500 ">Pramod Sahu <br> <span
+                    class="font-light text-xs"> Full Stack Developer </span> </a>
             <!-- mobile menu button -->
             <button class="mobile-menu-button p-3 mr-1 focus:outline-none text-xl dark:text-indigo-500">
-      
-              <ion-icon id="gridmenu" name="menu"></ion-icon>
-              <ion-icon id="closemenu" name="close"></ion-icon>
+
+                <ion-icon id="gridmenu" name="menu"></ion-icon>
+                <ion-icon id="closemenu" name="close"></ion-icon>
             </button>
-          </div>
+        </div>
 
-          <!-- Mobile header ends -->
+        <!-- Mobile header ends -->
 
-          <!-- Mobile nav bar starts -->
+        <!-- Mobile nav bar starts -->
 
-          <div class="sidebar bg-white w-40 space-y-1 py-0  md:py-7 absolute inset-y-11 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
-          
-              <!-- logo -->
-              <span class="hidden md:block">
-    
-              <a href="#" class="text-blue-700 flex items-center space-x-1 px-1 ">
-                
-                <span class="text-4xl font-thin">Pramod Sahu</span>
-               
-              </a><span class=" text-gray-600"> Full Stack Developer </span>
-              <div class="mt-6">
-                <hr class=" border-zinc-500" >
-              </div>
-    
+        <div
+            class="sidebar bg-white w-40 space-y-1 py-0  md:py-7 absolute inset-y-11 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+
+            <!-- logo -->
+            <span class="hidden md:block">
+
+                <a href="#" class="text-blue-700 flex items-center space-x-1 px-1 ">
+
+                    <span class="text-4xl font-thin">Pramod Sahu</span>
+
+                </a><span class=" text-gray-600"> Full Stack Developer </span>
+                <div class="mt-6">
+                    <hr class=" border-zinc-500">
+                </div>
+
             </span>
-              <!-- nav -->
-              <nav class="bg-white shadow-lg dark:bg-gray-900">
+            <!-- nav -->
+            <nav class="bg-white shadow-lg dark:bg-gray-900">
                 <!-- <a href="#" class="block text-gray-600 py-2.5 px-6 rounded transition duration-200   hover:ml-1 ">
                     <i class="fa fa-user"></i> &nbsp; &nbsp; About
                 </a> -->
-              
-                <a href="#" class="block text-gray-600 dark:text-gray-300 py-2 px-6 m-1 rounded-lg transition duration-200   focus:bg-blue-700 focus:text-white navBtn">
-                    <ion-icon class="text-blue-500" name="person"></ion-icon>  &nbsp;  About
+
+                <a href="#"
+                    class="block text-gray-600 dark:text-gray-300 py-2 px-6 m-1 rounded-lg transition duration-200   focus:bg-blue-700 focus:text-white navBtn">
+                    <ion-icon class="text-blue-500" name="person"></ion-icon> &nbsp; About
                 </a>
-                <a href="#experience" class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200  focus:bg-blue-700 focus:text-white navBtn">
-                    
+                <a href="#experience"
+                    class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200  focus:bg-blue-700 focus:text-white navBtn">
+
                     <ion-icon class="text-red-600" name="trending-up"></ion-icon>&nbsp; Experience
                 </a>
-                <a href="#projects" class="block text-gray-600  dark:text-gray-300 py-2.5 px-6 rounded transition duration-200    focus:bg-blue-700 focus:text-white navBtn">
+                <a href="#projects"
+                    class="block text-gray-600  dark:text-gray-300 py-2.5 px-6 rounded transition duration-200    focus:bg-blue-700 focus:text-white navBtn">
                     <ion-icon class="text-cyan-800 " name="pie-chart"></ion-icon>&nbsp; Projects
                 </a>
-                <a href="#skills" class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200  focus:bg-blue-700 focus:text-white navBtn">
-                    <ion-icon class="text-indigo-800" name="code-slash"></ion-icon>&nbsp;   Skills
+                <a href="#skills"
+                    class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200  focus:bg-blue-700 focus:text-white navBtn">
+                    <ion-icon class="text-indigo-800" name="code-slash"></ion-icon>&nbsp; Skills
                 </a>
-                <a href="#education" class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200   focus:bg-blue-700 focus:text-white navBtn">
+                <a href="#education"
+                    class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200   focus:bg-blue-700 focus:text-white navBtn">
                     <ion-icon class="text-yellow-600" name="school"></ion-icon>&nbsp; Education
                 </a>
-              
-                <a href="#contact" class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200 focus:bg-blue-700 focus:text-white navBtn">
+
+                <a href="#contact"
+                    class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200 focus:bg-blue-700 focus:text-white navBtn">
                     <ion-icon class="text-pink-700" name="mail-open"></ion-icon>&nbsp; Contact
                 </a>
-                <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf" class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200 focus:bg-blue-700 focus:text-white  navBtn ">
-                    <ion-icon name="document"></ion-icon>&nbsp;  Resume 
+                <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf"
+                    class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200 focus:bg-blue-700 focus:text-white  navBtn ">
+                    <ion-icon name="document"></ion-icon>&nbsp; Resume
                 </a>
-              
-          
-              </nav>
-            </div>
-          <!-- Mobile nav bar ends -->
 
-        </header>
+
+            </nav>
+        </div>
+        <!-- Mobile nav bar ends -->
+
+    </header>
 
     <div class="absolute w-full min-h-screen ">
-       
+     
+
         <div class="absolute z-0 top-0 w-full h-1/2 bg-cover bg-bottom pt-20 px-12 text-white text-center  "
             style="background-image: url('images/bg_banner.jpg')">
+            
 
         </div>
-        <div 
-            class="absolute    z-20 bottom-10 right-0 left-0 inline-flex space-x-20 justify-center font-bold uppercase tracking-wide text-gray-600 dark:text-orange-600   " id="navbar" >
-            <a href="#" class=" hover-underline-animation" >ABOUT</a>
+   
+
+
+        <div class="absolute    z-20 bottom-10 right-0 left-0 inline-flex space-x-20 justify-center font-bold uppercase tracking-wide text-gray-600 dark:text-indigo-500   "
+            id="navbar">
+            <a href="#" class=" hover-underline-animation">ABOUT</a>
             <a href="#experience" class="hover-underline-animation">EXPERIENCE</a>
             <a href="#projects" class="hover-underline-animation">PROJECTS</a>
             <a href="#skills" class="hover-underline-animation">SKILLS</a>
             <a href="#education" class="hover-underline-animation">EDUCATION</a>
             <a href="#contact" class="hover-underline-animation">CONTACT</a>
-            <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf"class="hover-underline-animation">RESUME</a>
+            <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf"
+                class="hover-underline-animation">RESUME</a>
         </div>
 
-        
+
     </div>
     <div class="relative z-10 flex min-h-screen h-auto justify-center items-center dark:bg-gray-900 ">
         <div class="relative max-w-4xl">
             <div
                 class="absolute z-10 inset-0 bg-gradient-to-r from-blue-800 to-orange-600 dark:from-indigo-700 dark:to-orange-900  shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
             </div>
-            <div class="relative z-20 bg-white dark:bg-black md:flex justify-between p-12 shadow-lg rounded-lg w-full max-w-4xl">
+            <div
+                class="relative z-20 bg-white dark:bg-black md:flex justify-between p-12 shadow-lg rounded-lg w-full max-w-4xl">
                 <div class="sm:flex flex-col justify-between space-y-6 py-6 md:pr-10 dark:text-gray-400">
                     <div>
                         <h2 class="text-lg">Hello, I am</h2>
@@ -177,15 +197,15 @@ input:checked ~ .dot {
                             Pramod Sahu
                         </h1>
                     </div>
-                    <p class="text-xl leading-relaxed">
+                    <p class="text-xl mt-0 leading-relaxed">
                         Full-stack web developer. I want to make things
                         that make a difference.
                     </p>
                     <div class="inline-flex text-xl text-gray-600 dark:text-gray-300 space-x-5">
                         <a href="https://www.instagram.com/p__sahu/" target="_blank">
-                            <ion-icon name="logo-instagram" class="hover:text-red-600" ></ion-icon>
+                            <ion-icon name="logo-instagram" class="hover:text-red-600"></ion-icon>
                         </a>
-  
+
                         <a href="https://www.linkedin.com/in/pramod-sahu" target="_blank">
                             <ion-icon name="logo-linkedin" class="hover:text-blue-700"></ion-icon>
                         </a>
@@ -194,31 +214,31 @@ input:checked ~ .dot {
                         </a>
 
                         <div class="flex items-center justify-center w-full mb-12">
-                            <div class="mr-3 text-gray-700 font-medium text-sm ">
-                                Change Theme
-                              </div>
-                            <label 
-                              for="toogleA"
-                              class="flex items-center cursor-pointer"
-                            >
-                              <!-- toggle -->
-                              <div class="relative">
-                                <!-- input -->
-                                <input id="toogleA" type="checkbox" onclick="toggleDarkClass()" class="sr-only" />
-                                <!-- line -->
-                                <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
-                                <!-- dot -->
-                                <div class="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
-                              </div>
-                              <!-- label -->
-                              
+                            <div class="mr-3 text-gray-500 font-normal text-sm ">
+                                Theme
+                            </div>
+                            <label for="toogleA" class="flex items-center cursor-pointer">
+                                <div class="relative">
+                                    <input id="toogleA" type="checkbox" onclick="toggleDarkClass()" class="sr-only" />
+                                    <div class="w-12 h-6 bg-gray-50 dark:bg-gray-900 rounded-full shadow-inner">
+                                        <ion-icon class="text-indigo-500 text-xs ml-1 mb-1" name="moon"></ion-icon> <ion-icon class="text-orange-500 text-xs ml-2 mb-1" name="sunny"></ion-icon>
+                                    </div>
+                                  
+                                    <div
+                                        class="dot absolute w-6 h-6 mt-1  bg-white rounded-full shadow -left-0 -top-1 transition">
+                                    </div>
+                                </div>
                             </label>
-                            
-                          </div>
+                        </div>
+
+                
+
+
                     </div>
                 </div>
                 <img src="images/person.jpg" alt="pramod-sahu"
                     class="flex-shrink-0 w-80 rounded-xl border-6 border-white dark:border-gray-900 shadow-md" />
+
             </div>
         </div>
     </div>
@@ -236,11 +256,12 @@ input:checked ~ .dot {
 
                     <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-8 dark:bg-gray-900">
 
-                        <h2  class="pt-1 font-bold text-2xl dark:text-indigo-500">
+                        <h2 class="pt-1 font-bold text-2xl dark:text-indigo-500">
                             Greymetrics
                             <!-- <ion-icon name="phone-portrait-outline" class="text-sm text-cyan-500"></ion-icon>   Greymetrics -->
                         </h2>
-                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400">Intern (<i>Oct 2019 - Feb 2020, Hyderabad  </i>)</span>
+                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400">Intern (<i>Oct 2019 - Feb
+                                2020, Hyderabad </i>)</span>
                         <p class="pt-3 dark:text-gray-400">
                             Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Consequuntur aperiam quibusdam
@@ -264,14 +285,15 @@ input:checked ~ .dot {
 
                         <h2 class="pt-1 dark:text-indigo-500 font-bold text-2xl">
                             VideoForm
-                        </h2> <span class=" text-sm font-normal text-gray-600 dark:text-gray-400">Full Stack Developer (<i>Feb 2020 - Nov 2020, Hyderabad</i>) </span>
+                        </h2> <span class=" text-sm font-normal text-gray-600 dark:text-gray-400">Full Stack Developer
+                            (<i>Feb 2020 - Nov 2020, Hyderabad</i>) </span>
                         <p class="pt-3 dark:text-gray-400">
                             Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Consequuntur aperiam quibusdam
                             repudiandae et necessitatibus culpa libero
                             mollitia.
                         </p>
-                      
+
                     </div>
                 </div>
                 <div class="relative">
@@ -280,17 +302,18 @@ input:checked ~ .dot {
                     </div>
 
                     <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-8 dark:bg-gray-900">
-                        <h2  class="pt-1 font-bold text-2xl dark:text-indigo-500">
+                        <h2 class="pt-1 font-bold text-2xl dark:text-indigo-500">
                             Tata Consultancy Services
                         </h2>
-                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400">QA Engineer (<i>Nov 2020 - Apr 2020, Bengaluru</i>) </span>
+                        <span class=" text-sm font-normal text-gray-600 dark:text-gray-400">QA Engineer (<i>Nov 2020 -
+                                Apr 2020, Bengaluru</i>) </span>
                         <p class="pt-3 dark:text-gray-400">
                             Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Consequuntur aperiam quibusdam
                             repudiandae et necessitatibus culpa libero
                             mollitia.
                         </p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -310,93 +333,237 @@ input:checked ~ .dot {
                     <div class="relative">
 
                         <!-- back card -->
-                        <div class="absolute  z-10 inset-0 bg-white  dark:bg-black dark:text-gray-300  px-10 py-8 rounded-md  " id="tribloopBlock">
-                                <h1 class="text-2xl dark:text-indigo-500"> Accomplishments <span onclick="hideTlblock()" > <ion-icon class="text-2xl cursor-pointer float-right" name="close"></ion-icon> </span>  </h1> 
+                        <div class="absolute  z-10 inset-0 bg-white  dark:bg-black dark:text-gray-300  px-10 py-8 rounded-md  "
+                            id="tribloopBlock">
+                            <h1 class="text-2xl font-medium dark:text-indigo-500"> Accomplishments <span
+                                    onclick="hideBlock('tribeloop')">
+                                    <ion-icon class="text-2xl hover:text-blue-600 cursor-pointer float-right mt-1" name="close"></ion-icon>
+                                </span> </h1>
 
-                        <ul class="list-disc ml-4 mt-5" >
-                            <li class="mb-2" >
-                                 Responsive Web Site Design
-                            </li >
-                            <li class="mb-2">
-                                EJS Fontend 
-                            </li>
-                            <li class="mb-2">
-                                Chrome Developer tool  
-                            </li>
-                            <li class="mb-2">
-                                Frontend Debugging
-                            </li>
-                            <li class="mb-2">
-                                Visual Studio Code
-                            </li>
-                            <li class="mb-2">
-                                Dynamic Data Binding
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- back card ends -->
-                        
-                        <img id="tribloopImg" onclick="showTlblock()" src="./images/work/tribeloop.png" alt="" class="object-cover  cursor-pointer rounded-md w-full h-72" />
+                            <ul class="list-disc ml-4 mt-5">
+                                <li class="mb-2">
+                                    Responsive Web Site Design
+                                </li>
+                                <li class="mb-2">
+                                    EJS Fontend
+                                </li>
+                                <li class="mb-2">
+                                    Chrome Developer tool
+                                </li>
+                                <li class="mb-2">
+                                    Frontend Debugging
+                                </li>
+                                <li class="mb-2">
+                                    Visual Studio Code
+                                </li>
+                                <li class="mb-2">
+                                    Dynamic Data Binding
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- back card ends -->
+
+                        <img id="tribloopImg" onclick="showAcomBlock('tibleloop')" src="./images/work/tribeloop.png" alt=""
+                            class="object-cover  cursor-pointer rounded-md w-full h-72" />
                         <div class="p-6 dark:text-gray-300">
                             <h3 class="font-bold text-2xl dark:text-indigo-500">Tribeloop</h3>
                             <p class="pt-3">
-                               Mobile responsive support article knowledge base site.
+                                Mobile responsive support article knowledge base site.
                             </p>
-                            <a href="#"
-                                class="text-blue-500">View
-                                More</a>
+                            <a href="https://greymetrics.tribeloop.com/support" target="_blank" class="text-blue-500">View
+                                Online</a>
                         </div>
 
                     </div>
-                   
+
 
                 </div>
 
 
                 <div class="bg-white rounded-md shadow-md dark:bg-black">
-                    <img src="./images/work/greymetrics.png" alt="" class="object-cover rounded-md w-full h-72" />
-                    <div class="p-6">
-                        <h3 class="font-bold text-2xl dark:text-indigo-500">Greymetrics</h3>
-                        <p class="pt-3 dark:text-gray-300">
-                            Marketing Reports & Dashboards Web App for Digital Agencies
-                        </p>
-                        <a href="#"
-                            class="text-blue-500">View Project</a>
+                    <div class="relative">
+                        <!-- back card -->
+                        <div class="absolute  z-10 inset-0 bg-white  dark:bg-black dark:text-gray-300  px-10 py-8 rounded-md  "
+                            id="greymetricsBlock">
+                            <h1 class="text-2xl font-medium dark:text-indigo-500"> Accomplishments <span
+                                    onclick="hideBlock('greymetrics')">
+                                    <ion-icon class="text-2xl hover:text-blue-600 cursor-pointer float-right mt-1" name="close"></ion-icon>
+                                </span> </h1>
+
+                            <ul class="list-disc ml-4 mt-5">
+                                <li class="mb-2">
+                                    MERN Stack Web App Feature Enhancement
+                                </li>
+                                <li class="mb-2">
+                                    Worked on Dynamic Graphs and Charts
+                                </li>
+                                <li class="mb-2">
+                                   Worked on Angular Web Security (Preventing cross-site scripting (XSS) )
+                                </li> 
+                                
+                            </ul>
+                        </div>
+                        <!-- back card ends -->
+
+
+                        <img id="gmImg" onclick="showAcomBlock('greymetricsBlock')" src="./images/work/greymetrics.png" alt=""
+                            class="object-cover cursor-pointer rounded-md w-full h-72" />
+                        <div class="p-6">
+                            <h3 class="font-bold text-2xl dark:text-indigo-500">Greymetrics</h3>
+                            <p class="pt-3 dark:text-gray-300">
+                                Marketing Reports & Dashboards Web App for Digital Agencies
+                            </p>
+                            <a href="https://greymetrics.com/" target="_blank"  class="text-blue-500">View Online</a>
+                        </div>
                     </div>
+
                 </div>
-                <div class="bg-white rounded-md shadow-md dark:bg-black">
-                    <img src="images/work3.jpg" alt="" class="object-cover rounded-md w-full h-72" />
-                    <div class="p-6 ">
-                        <h3 class="font-bold text-2xl dark:text-indigo-500">TCS BaNCS</h3>
-                        <p class="pt-3 dark:text-gray-300">
-                            A Core Banking Software Suite
-                        </p>
-                        <a href="#"
-                            class="text-blue-500">View Project</a>
-                    </div>
-                </div>
+
                 <div class="bg-white rounded-md shadow-md dark:bg-black">
 
-                    <img src="./images/work/videoform.png" alt="" class="object-cover w-full h-72" />
-                    <div class="p-6 ">
-                        <h3 class="font-bold text-2xl dark:text-indigo-500">VideoForm</h3>
-                        <p class="pt-3 dark:text-gray-300">
-                            Personalized video platform web app for  marketing teams
-                        </p>
-                        <a href="#"
-                            class="text-blue-500">View Project</a>
+                    <div class="relative">
+
+                        <!-- back card -->
+                        <div class="absolute  z-10 inset-0 bg-white  dark:bg-black dark:text-gray-300  px-10 py-8 rounded-md  "
+                            id="videoform">
+                            <h1 class="text-2xl font-medium dark:text-indigo-500"> Accomplishments <span
+                                    onclick="hideBlock('videoform')">
+                                    <ion-icon class="text-2xl hover:text-blue-600 cursor-pointer float-right mt-1" name="close"></ion-icon>
+                                </span> </h1>
+
+                            <ul class="list-disc ml-4 mt-5">
+                                <li class="mb-2">
+                                    Full Stack Web Developement
+                                </li>
+                                <li class="mb-2">
+                                   NodeJS with Express
+                                </li>
+                                <li class="mb-2">
+                                    MongoDB Atlas console
+                                </li>
+                                
+                                <li class="mb-2">
+                                    Implemented file upload using AWS S3 and NodeJS
+                                </li>
+                                <li class="mb-2">
+                                    NodeJS middleware authentication
+                                </li>
+                                <li class="mb-2">
+                                    Framerworks: Datatable, konvaJS etc..
+                                </li>
+                                <li class="mb-2">
+                                    Implemented payment interface ChargeBee and Stripe.
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- back card ends -->
+
+
+                        <img  onclick="showAcomBlock('videoform')" src="./images/work/videoform.png" alt=""
+                            class="object-cover cursor-pointer rounded-md w-full h-72" />
+                        <div class="p-6 ">
+                            <h3 class="font-bold text-2xl dark:text-indigo-500">VideoForm</h3>
+                            <p class="pt-3 dark:text-gray-300">
+                                Personalized video platform web app for marketing teams
+                            </p>
+                            <a href="https://www.videoform.com/" target="_blank" class="text-blue-500">View Online</a>
+                        </div>
+
                     </div>
+
+
                 </div>
+
                 <div class="bg-white rounded-md shadow-md dark:bg-black">
-                    <img src="./images/work/pkforms.png" alt="" class="object-cover w-full h-72" />
+                    <div class="relative">
+
+                        <!-- back card -->
+                        <div class="absolute  z-10 inset-0 bg-white  dark:bg-black dark:text-gray-300  px-10 py-8 rounded-md  "
+                            id="tcsBlock">
+                            <h1 class="text-2xl font-medium dark:text-indigo-500"> Accomplishments <span
+                                    onclick="hideBlock('tcs')">
+                                    <ion-icon class="text-2xl cursor-pointer hover:text-blue-600 float-right mt-1" name="close"></ion-icon>
+                                </span> </h1>
+
+                            <ul class="list-disc ml-4 mt-5">
+                                <li class="mb-2">
+                                   Manual testing 
+                                </li>
+                                <li class="mb-2">
+                                    API Testing 
+                                </li>
+                                <li class="mb-2">
+                                    Swagger
+                                </li>
+                                <li class="mb-2">
+                                    Testing planing
+                                </li>
+                                <li class="mb-2">
+                                    Project Management Scrum
+                                </li>
+                              
+                                
+                            </ul>
+                        </div>
+                        <!-- back card ends -->
+
+
+
+                        <img id="tcsImg" onclick="showAcomBlock('tcs')" src="images/work3.jpg" alt=""
+                            class="object-cover cursor-pointer rounded-md w-full h-72" />
+                        <div class="p-6 ">
+                            <h3 class="font-bold text-2xl dark:text-indigo-500">TCS BaNCS</h3>
+                            <p class="pt-3 dark:text-gray-300">
+                                A Core Banking Software Suite
+                            </p>
+                            <!-- <a href="#" class="text-blue-500">View Online</a> -->
+                        </div>
+                    </div>
+
+
+                </div>
+
+               
+                <div class="bg-white rounded-md shadow-md dark:bg-black">
+                  <div class="relative">
+
+                 
+                    <!-- back card -->
+                    <div class="absolute  z-10 inset-0 bg-white  dark:bg-black dark:text-gray-300  px-10 py-8 rounded-md  "
+                        id="pkforms">
+                        <h1 class="text-2xl font-medium dark:text-indigo-500"> Accomplishments <span
+                                onclick="hideBlock('pkforms')">
+                                <ion-icon class="text-2xl hover:text-blue-600 cursor-pointer float-right mt-1" name="close"></ion-icon>
+                            </span> </h1>
+
+                        <ul class="list-disc ml-4 mt-5">
+                            <li class="mb-2">
+                                Full Stack Web Developement
+                            </li>
+                            <li class="mb-2">
+                                Dynamic data binding
+                            </li>
+                            <li class="mb-2">
+                                Dynamic JavaScript input validation
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <!-- back card ends -->
+
+                    <img  onclick="showAcomBlock('pkforms')" src="./images/work/pkforms.png" alt=""
+                        class="object-cover cursor-pointer rounded-md w-full h-72" />
                     <div class="p-6 ">
                         <h3 class="font-bold text-2xl dark:text-indigo-500">PkForms</h3>
                         <p class="pt-3 dark:text-gray-300">
                             Experimental web app google forms clone
                         </p>
-                        <a href="#"
-                            class="text-blue-500">View Project</a>
+                        <!-- <a href="#" class="text-blue-500">View Project</a> -->
                     </div>
+
+                </div>
+
+
                 </div>
             </div>
         </div>
@@ -533,7 +700,7 @@ input:checked ~ .dot {
                                 <div class="bg-blue-600 h-3 dark:bg-orange-700" style="width: 65%"></div>
                             </div>
 
-                        
+
 
                         </div>
                     </div>
@@ -558,7 +725,7 @@ input:checked ~ .dot {
                                 <div class="bg-blue-600 h-3 dark:bg-orange-700" style="width: 75%"></div>
                             </div>
 
-                          
+
 
                         </div>
                     </div>
@@ -594,13 +761,15 @@ input:checked ~ .dot {
                         </div>
 
                         <div class="relative p-8 z-20 bg-white rounded-lg dark:bg-black">
-                            <h3 class="font-bold text-2xl dark:text-indigo-500">Chouskesy Engineering College Bilaspur</h3>
-                            <span class=" text-sm font-normal text-gray-500  dark:text-gray-300">Bilaspur, Chhattisgarh (<i> 2015 -2019
-                            </i>)</span>
+                            <h3 class="font-bold text-2xl dark:text-indigo-500">Chouskesy Engineering College Bilaspur
+                            </h3>
+                            <span class=" text-sm font-normal text-gray-500  dark:text-gray-300">Bilaspur, Chhattisgarh
+                                (<i> 2015 -2019
+                                </i>)</span>
                             <p class="pt-3 ">
-                                <ul class="list-disc ml-4 dark:text-gray-300">
-                                    <li> BE - Computer Science Engineering </li>
-                                </ul>
+                            <ul class="list-disc ml-4 dark:text-gray-300">
+                                <li> BE - Computer Science Engineering </li>
+                            </ul>
                             </p>
 
                         </div>
@@ -616,8 +785,10 @@ input:checked ~ .dot {
                         </div>
 
                         <div class="relative p-8 z-20 bg-white rounded-lg dark:bg-black">
-                            <h3 class="font-bold text-2xl dark:text-indigo-500">St. Joseph's Hr. Sec. School Jairamnagar </h3>
-                            <span class=" text-sm font-normal text-gray-500  dark:text-gray-300">Bilaspur, Chhattisgarh (<i> 2015 </i>)</span>
+                            <h3 class="font-bold text-2xl dark:text-indigo-500">St. Joseph's Hr. Sec. School Jairamnagar
+                            </h3>
+                            <span class=" text-sm font-normal text-gray-500  dark:text-gray-300">Bilaspur, Chhattisgarh
+                                (<i> 2015 </i>)</span>
                             <p class="pt-3">
                             <ul class="list-disc ml-4 dark:text-gray-300">
                                 <li> 12th - PCM </li>
@@ -649,8 +820,9 @@ input:checked ~ .dot {
         <div class="mt-24 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-20">
             <!-- card 1 -->
             <div class="relative">
-                
-                <div class="absolute z-10 inset-0  bg-gradient-to-r from-indigo-700 to-orange-800 shadow-lg transform -skew-y-3  sm:skew-y-0 sm:-rotate-3  sm:rounded-lg">
+
+                <div
+                    class="absolute z-10 inset-0  bg-gradient-to-r from-indigo-700 to-orange-800 shadow-lg transform -skew-y-3  sm:skew-y-0 sm:-rotate-3  sm:rounded-lg">
                 </div>
 
                 <div class=" text-center relative z-20 bg-gray-900 h-full rounded-md shadow-md px-10 py-8">
@@ -689,7 +861,7 @@ input:checked ~ .dot {
 
                 </div>
             </div>
-            
+
             <div class="relative">
                 <div
                     class="absolute z-10 inset-0  bg-gradient-to-r from-indigo-700  to-orange-900 shadow-lg transform -skew-y-3  sm:skew-y-0 sm:-rotate-3  sm:rounded-lg">
@@ -704,15 +876,15 @@ input:checked ~ .dot {
                     <!-- <span class=" text-sm font-normal text-gray-600 " >Intern</span> -->
                     <p class="pt-3 ">
                     <ul class=" text-gray-400 ">
-                        <li > <a href="https://www.instagram.com/p__sahu/" target="_blank" class="hover:text-rose-500">
-                                <ion-icon name="logo-instagram"></ion-icon>  Instagram
+                        <li> <a href="https://www.instagram.com/p__sahu/" target="_blank" class="hover:text-rose-500">
+                                <ion-icon name="logo-instagram"></ion-icon> Instagram
                             </a></li>
                         <li> <a href="https://www.facebook.com/pramod.sahu.54379/" target="_blank"
                                 class="hover:text-blue-700 ">
-                                <ion-icon name="logo-facebook"></ion-icon>  Facebook
+                                <ion-icon name="logo-facebook"></ion-icon> Facebook
                             </a></li>
                         <li> <a href="https://twitter.com/psahu733" target="_blank" class="hover:text-blue-400">
-                                <ion-icon name="logo-twitter"></ion-icon>  Twitter
+                                <ion-icon name="logo-twitter"></ion-icon> Twitter
                             </a></li>
                         <li> <a href="https://www.linkedin.com/in/pramod-sahu" target="_blank"
                                 class="hover:text-blue-700">
@@ -726,15 +898,16 @@ input:checked ~ .dot {
 
                 </div>
             </div>
-</div>
+        </div>
 
-            <div class="max-w-6xl mx-auto mt-32">
-                <div class="text-center">
-                    <p class="pt-2 font-medium text-xs text-indigo-800">&copy; Copyright 2022 pramod-sahu.com<br> All rights reserved. </p>
-                </div>
+        <div class="max-w-6xl mx-auto mt-32">
+            <div class="text-center">
+                <p class="pt-2 font-medium text-xs text-indigo-800">&copy; Copyright 2022 pramod-sahu.com<br> All rights
+                    reserved. </p>
             </div>
         </div>
-  
+        </div>
+
 
     </section>
     <!-- <section class="pt-20 pb-36 px-8 bg-gray-50">
@@ -774,7 +947,7 @@ input:checked ~ .dot {
     <script>
 
         const btn = document.querySelector(".mobile-menu-button");
-       
+
 
         const sidebar = document.querySelector(".sidebar");
 
@@ -784,55 +957,118 @@ input:checked ~ .dot {
 
         var counter = 1;
         btn.addEventListener("click", () => {
-          
 
-        console.log( counter);
-        sidebar.classList.toggle("-translate-x-full");
 
-        
-     if( counter == 1){
-        gridmenu.style.display = "none";
-        closemenu.style.display = "block";
-     }else{
-        if (closemenu.style.display === "none") {
-        gridmenu.style.display = "none";
-        closemenu.style.display = "block";
-        } else {
-        gridmenu.style.display = "block";
-        closemenu.style.display = "none";
-        }
-     }
-        
+            console.log(counter);
+            sidebar.classList.toggle("-translate-x-full");
 
-        counter++;
+
+            if (counter == 1) {
+                gridmenu.style.display = "none";
+                closemenu.style.display = "block";
+            } else {
+                if (closemenu.style.display === "none") {
+                    gridmenu.style.display = "none";
+                    closemenu.style.display = "block";
+                } else {
+                    gridmenu.style.display = "block";
+                    closemenu.style.display = "none";
+                }
+            }
+
+
+            counter++;
         });
 
 
-       
-        function showTlblock(){
 
-            console.log("first");
-            var tribloopBlock = document.getElementById("tribloopBlock");
+        function showAcomBlock(blockId) {
+            console.log(blockId, "blockId");
 
-            tribloopBlock.style.display = "block";
+           
+
+            switch(blockId) {
+
+            case "tibleloop":
+                // code block
+                console.log("first");
+                var tribloopBlock = document.getElementById("tribloopBlock");
+                tribloopBlock.style.display = "block";
+                break;
+            case "greymetricsBlock":
+                // code block
+
+                var greymetricsBlock = document.getElementById("greymetricsBlock");
+                greymetricsBlock.style.display = "block";
+                break;
+            case "tcs":
+                // code block
+
+                var tcsBlock = document.getElementById("tcsBlock");
+                tcsBlock.style.display = "block";
+                break;
+            case "videoform":
+                // code block
+
+                var videoform = document.getElementById("videoform");
+                videoform.style.display = "block";
+                break;
+            case "pkforms":
+                // code block
+
+                var pkforms = document.getElementById("pkforms");
+                pkforms.style.display = "block";
+                break;
+            default:
+                // code block
+            }
+
+
         }
-        function hideTlblock(){
+        function hideBlock(blockId) {
 
-            console.log("first");
-            var tribloopBlock = document.getElementById("tribloopBlock");
+            switch(blockId) {
 
-            tribloopBlock.style.display = "none";
+                case "tribeloop":
+                    var tribloopBlock = document.getElementById("tribloopBlock");
+                    tribloopBlock.style.display = "none";
+                    break;
+                case "greymetrics":
+
+                    var greymetricsBlock = document.getElementById("greymetricsBlock");
+                    greymetricsBlock.style.display = "none";
+                    break;
+                case "tcs":
+
+                    var tcsBlock = document.getElementById("tcsBlock");
+                    tcsBlock.style.display = "none";
+                    break;
+                case "videoform":
+
+                    var videoform = document.getElementById("videoform");
+                    videoform.style.display = "none";
+                    break;
+                case "pkforms":
+
+                    var pkforms = document.getElementById("pkforms");
+                    pkforms.style.display = "none";
+                    break;
+                default:
+                    // code block
+                }
+
+         
         }
 
 
-        
-function toggleDarkClass(){
-    var element = document.querySelector("body");
-  element.classList.toggle("dark");
-}
+
+        function toggleDarkClass() {
+            var element = document.querySelector("body");
+            element.classList.toggle("dark");
+        }
 
 
-      </script>
+    </script>
 
 </body>
 
