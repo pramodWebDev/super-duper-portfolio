@@ -16,7 +16,10 @@ module.exports = {
         'orange':colors.orange,
         'zinc':colors.zinc,
         'rose':colors.rose,
-        'slate':colors.slate
+        'slate':colors.slate,
+        'customgrey':"#000B1F"
+
+
 
       },
     },

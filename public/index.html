@@ -70,9 +70,10 @@
             background-color: #4338ca;
         }
     </style>
+ 
 </head>
 
-<body class="antialiased relative text-gray-600 ">
+<body class="antialiased relative text-gray-600 dark">
 
 
 
@@ -142,10 +143,10 @@
                     class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200 focus:bg-blue-700 focus:text-white navBtn">
                     <ion-icon class="text-pink-700" name="mail-open"></ion-icon>&nbsp; Contact
                 </a>
-                <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf"
+                <!-- <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf"
                     class="block text-gray-600 dark:text-gray-300 py-2.5 px-6 rounded transition duration-200 focus:bg-blue-700 focus:text-white  navBtn ">
                     <ion-icon name="document"></ion-icon>&nbsp; Resume
-                </a>
+                </a> -->
 
 
             </nav>
@@ -173,13 +174,15 @@
             <a href="#skills" class="hover-underline-animation">SKILLS</a>
             <a href="#education" class="hover-underline-animation">EDUCATION</a>
             <a href="#contact" class="hover-underline-animation">CONTACT</a>
-            <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf"
-                class="hover-underline-animation">RESUME</a>
+            <!-- <a href="../assets/Pramod-Sahu-Resume.pdf" download="Pramod-Sahu-Resume.pdf"
+                class="hover-underline-animation">RESUME</a> -->
         </div>
 
 
     </div>
     <div class="relative z-10 flex min-h-screen h-auto justify-center items-center dark:bg-gray-900 ">
+       
+    
         <div class="relative max-w-4xl">
             <div
                 class="absolute z-10 inset-0 bg-gradient-to-r from-blue-800 to-orange-600 dark:from-indigo-700 dark:to-orange-900  shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
@@ -379,7 +382,7 @@
                         </div>
                         <!-- back card ends -->
 
-                        <img id="tribloopImg" onclick="showAcomBlock('tibleloop')" src="./images/work/tribeloop.png"
+                        <img id="tribloopImg" loading="lazy" onclick="showAcomBlock('tibleloop')" src="./images/work/tribeloop.png"
                             alt="" class="object-cover  cursor-pointer rounded-md w-full h-72" />
                         <div class="p-6 dark:text-gray-300">
                             <h3 class="font-bold text-2xl dark:text-indigo-500">Tribeloop</h3>
@@ -424,7 +427,7 @@
                         <!-- back card ends -->
 
 
-                        <img id="gmImg" onclick="showAcomBlock('greymetricsBlock')" src="./images/work/greymetrics.png"
+                        <img id="gmImg" loading="lazy" onclick="showAcomBlock('greymetricsBlock')" src="./images/work/greymetrics.png"
                             alt="" class="object-cover cursor-pointer rounded-md w-full h-72" />
                         <div class="p-6">
                             <h3 class="font-bold text-2xl dark:text-indigo-500">Greymetrics</h3>
@@ -478,7 +481,7 @@
                         <!-- back card ends -->
 
 
-                        <img onclick="showAcomBlock('videoform')" src="./images/work/videoform.png" alt=""
+                        <img loading="lazy" onclick="showAcomBlock('videoform')" src="./images/work/videoform.png" alt=""
                             class="object-cover cursor-pointer rounded-md w-full h-72" />
                         <div class="p-6 ">
                             <h3 class="font-bold text-2xl dark:text-indigo-500">VideoForm</h3>
@@ -529,7 +532,7 @@
 
 
 
-                        <img id="tcsImg" onclick="showAcomBlock('tcs')" src="images/work3.jpg" alt=""
+                        <img id="tcsImg" loading="lazy" onclick="showAcomBlock('tcs')" src="images/work3.jpg" alt=""
                             class="object-cover cursor-pointer rounded-md w-full h-72" />
                         <div class="p-6 ">
                             <h3 class="font-bold text-2xl dark:text-indigo-500">TCS BaNCS</h3>
@@ -572,7 +575,7 @@
                         </div>
                         <!-- back card ends -->
 
-                        <img onclick="showAcomBlock('pkforms')" src="./images/work/pkforms.png" alt=""
+                        <img loading="lazy" onclick="showAcomBlock('pkforms')" src="./images/work/pkforms.png" alt=""
                             class="object-cover cursor-pointer rounded-md w-full h-72" />
                         <div class="p-6 ">
                             <h3 class="font-bold text-2xl dark:text-indigo-500">PkForms</h3>
@@ -915,39 +918,11 @@
 
 
     </section>
-    <!-- <section class="pt-20 pb-36 px-8 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center">
-                <h1 class="text-6xl font-bold text-gray-800">Contact</h1>
-                <p class="pt-2">Get in touch with me</p>
-            </div>
-        </div>
-        <div class="mt-16 relative max-w-4xl mx-auto">
-            <div class="absolute z-10 inset-0 bg-gradient-to-r from-blue-800  to-orange-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
-            </div>
-            <div class="relative z-20 bg-white rounded-md shadow-md p-12">
-                <form action="">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                        <input type="text" placeholder="Name"
-                            class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400" />
-                        <input type="text" placeholder="Email"
-                            class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400" />
-                        <input type="text" placeholder="Subject"
-                            class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2" />
-                        <textarea rows="5" placeholder="Message"
-                            class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"></textarea>
-                    </div>
-                    <button
-                        class="inline-block w-auto mt-4 px-6 py-2 bg-gradient-to-r from-blue-800  to-orange-600 rounded-md shadow-md text-sm font-bold text-white">
-                        Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section> -->
-    <!-- Contact ends -->
+    
 
     <script>
+
+document.getElementById("toogleA").checked = true;
 
         const btn = document.querySelector(".mobile-menu-button");
         const sidebar = document.querySelector(".sidebar");
